@@ -1,22 +1,17 @@
-import logo from './logo.svg';
+import {useState} from 'react';
 import './App.css';
 
 function App() {
+  [count, setCount] = useState(0);
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div class="container">
+            <ul>
+              <li style={{ '--i': 6 }} onMouseOver={()=>{count+1}}>{count}</li>          
+            </ul>
+          </div>
       </header>
     </div>
   );
